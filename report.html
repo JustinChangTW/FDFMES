@@ -11,10 +11,10 @@
 <body>
     <div class="container text-center">
         <div class="row">
-            <h1>資通安成熟度評鑑報告</h1>
+            <h1>資通安全數位鑑識成熟度評鑑報告</h1>
         </div>
         <div class="row">
-            <h2 >1.資通安成熟度總分 </h2>
+            <h2 >1.資通安全數位鑑識成熟度總分 </h2>
         </div>
         <div class="row">            
             <div class="col">
@@ -37,7 +37,7 @@
             </div>
         </div>  
         <div class="row">
-            <h2 >2.各構面資通安成熟度 </h2>
+            <h2 >2.各構面數位鑑識資通安成熟度 </h2>
         </div>      
         <div class="row">      
             <div class="col">
@@ -162,7 +162,7 @@
     let scoreArray = totalResult.map(item => item.percentage);
 
     let radars = [
-        {label:'成熟度總分數',labels:facetArray,score:scoreArray,className:'total-chart',type:'radar'},
+        {label:'數位鑑識成熟度總分數',labels:facetArray,score:scoreArray,className:'total-chart',type:'radar'},
     ]
 
     
@@ -207,7 +207,7 @@
 
     let sumScore = reportData.reduce((total, obj) => total + Number(obj.score), 0);
 
-    document.querySelector('#sum').textContent = sumScore
+    document.querySelector('#sum').textContent = sumScore + "/100"
     
 </script>
 </body>
